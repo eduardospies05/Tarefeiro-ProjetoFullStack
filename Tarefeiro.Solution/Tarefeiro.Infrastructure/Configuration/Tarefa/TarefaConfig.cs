@@ -11,7 +11,15 @@ public class TarefaConfig : IEntityTypeConfiguration<TarefaEntity>
     {
         builder.HasKey(t => t.Id);
 
-        builder.Property(t => t.Status).IsRequired().HasMaxLength(20);
+        builder.HasOne(t => t.Status)
+               .WithMany()
+               .HasForeignKey(t => t.StatusId)
+               .IsRequired();
+
+        builder.HasOne(t => t.Categoria)
+               .WithMany()
+               .HasForeignKey(t => t.CategoriaId)
+               .IsRequired();
 
         builder.Property(t => t.Comentario).IsRequired().HasMaxLength(20);
     }

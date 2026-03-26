@@ -16,6 +16,7 @@
     <Folder Include="DTOs/" />
     <Folder Include="DTOs/Categoria/" />
     <Folder Include="DTOs/Status/" />
+    <Folder Include="DTOs/Tarefa/" />
     <Folder Include="Mapping/" />
     <Folder Include="Mapping/Categoria/" />
     <Folder Include="Mapping/Status/" />
