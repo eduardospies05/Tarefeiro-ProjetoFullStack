@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Tarefeiro.Domain/Tarefeiro.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="16.1.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppResponse/" />
+    <Folder Include="DTOs/" />
+    <Folder Include="DTOs/Categoria/" />
+    <Folder Include="DTOs/Status/" />
+    <Folder Include="Mapping/" />
+    <Folder Include="Mapping/Categoria/" />
+    <Folder Include="Mapping/Status/" />
+    <Folder Include="Service/" />
+    <Folder Include="UseCaseImplementation/" />
+    <Folder Include="UseCaseImplementation/Categoria/" />
+    <Folder Include="UseCaseImplementation/Status/" />
+    <Folder Include="UseCaseInterface/" />
+    <Folder Include="UseCaseInterface/Categoria/" />
+    <Folder Include="UseCaseInterface/Status/" />
+    <Folder Include="Validation/Status/" />
+  </ItemGroup>
+</Project>
