@@ -12,6 +12,7 @@
     <Folder Include="Controllers/" />
     <Folder Include="Controllers/Categoria/" />
     <Folder Include="Controllers/Status/" />
+    <Folder Include="Controllers/Tarefa/" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="../Tarefeiro.Infrastructure/Tarefeiro.Infrastructure.csproj" />

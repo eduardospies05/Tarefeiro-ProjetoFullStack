@@ -20,13 +20,17 @@
     <Folder Include="Mapping/" />
     <Folder Include="Mapping/Categoria/" />
     <Folder Include="Mapping/Status/" />
+    <Folder Include="Mapping/Tarefa/" />
     <Folder Include="Service/" />
     <Folder Include="UseCaseImplementation/" />
     <Folder Include="UseCaseImplementation/Categoria/" />
     <Folder Include="UseCaseImplementation/Status/" />
+    <Folder Include="UseCaseImplementation/Tarefa/" />
     <Folder Include="UseCaseInterface/" />
     <Folder Include="UseCaseInterface/Categoria/" />
     <Folder Include="UseCaseInterface/Status/" />
+    <Folder Include="UseCaseInterface/Tarefa/" />
     <Folder Include="Validation/Status/" />
+    <Folder Include="Validation/Tarefa/" />
   </ItemGroup>
 </Project>
