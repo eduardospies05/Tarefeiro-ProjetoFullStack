@@ -58,4 +58,17 @@ export class UpdateTarefasComponent implements OnInit {
       })
     }
   }
+
+  onSubmit(): void {
+    this.service.updateTarefa(this.update).subscribe({
+      next: (response) => {
+        if(response.status && response.data)
+          alert("Tarefa atualizada com sucesso");
+        this.router.navigateByUrl("/tarefas");
+      },
+      error: () => {
+        alert("Erro ao atualizar tarefa");
+      }
+    });
+  }
 }
