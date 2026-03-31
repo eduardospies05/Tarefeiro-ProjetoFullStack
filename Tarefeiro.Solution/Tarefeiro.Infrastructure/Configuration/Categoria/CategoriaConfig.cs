@@ -10,6 +10,6 @@ public class CategoriaConfig : IEntityTypeConfiguration<CategoriaEntity>
     public void Configure(EntityTypeBuilder<CategoriaEntity> builder)
     {
         builder.HasKey(c => c.Id);
-        builder.Property(c => c.Nome).IsRequired().HasMaxLength(20);
+        builder.Property(c => c.Nome).IsRequired().HasMaxLength(50);
     }
 }

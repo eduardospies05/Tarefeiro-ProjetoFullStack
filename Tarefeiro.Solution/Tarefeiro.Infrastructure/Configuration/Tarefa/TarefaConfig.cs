@@ -21,6 +21,6 @@ public class TarefaConfig : IEntityTypeConfiguration<TarefaEntity>
                .HasForeignKey(t => t.CategoriaId)
                .IsRequired();
 
-        builder.Property(t => t.Comentario).IsRequired().HasMaxLength(20);
+        builder.Property(t => t.Comentario).IsRequired().HasMaxLength(50);
     }
 }

@@ -1,0 +1,764 @@
+2026-03-31 01:33:25.594 -03:00 [INF] Now listening on: http://localhost:5091
+2026-03-31 01:33:25.906 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-31 01:33:25.911 -03:00 [INF] Hosting environment: Development
+2026-03-31 01:33:25.914 -03:00 [INF] Content root path: /mnt/storage/Projects/FullStack/ProjetoTarefeiroCRUD/Tarefeiro.Solution/Tarefeiro.Presentation
+2026-03-31 01:36:13.834 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa - null null
+2026-03-31 01:36:14.059 -03:00 [WRN] Failed to determine the https port for redirect.
+2026-03-31 01:36:14.138 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:36:14.153 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:14.228 -03:00 [INF] Route matched with {action = "GetTarefas", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefasAsync() on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:36:16.941 -03:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-03-31 01:36:20.051 -03:00 [INF] Executed DbCommand (123ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+2026-03-31 01:36:20.332 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:36:20.477 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation) in 6237.5312ms
+2026-03-31 01:36:20.483 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:20.522 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa - 200 null application/json; charset=utf-8 6694.453ms
+2026-03-31 01:36:24.014 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa/5 - null null
+2026-03-31 01:36:24.050 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:36:24.052 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:24.106 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Status - null null
+2026-03-31 01:36:24.122 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:36:24.124 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:24.168 -03:00 [INF] Route matched with {action = "GetStatus", controller = "Status"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusAsync() on controller Tarefeiro.Presentation.Controllers.Status.StatusController (Tarefeiro.Presentation).
+2026-03-31 01:36:24.172 -03:00 [INF] Route matched with {action = "GetTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:36:24.311 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`Nome`
+FROM `Status` AS `s`
+2026-03-31 01:36:24.325 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Status.StatusDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:36:24.346 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation) in 176.0262ms
+2026-03-31 01:36:24.347 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:24.349 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Status - 200 null application/json; charset=utf-8 242.4931ms
+2026-03-31 01:36:24.364 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:36:24.366 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:36:24.367 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:24.381 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:36:24.660 -03:00 [INF] Executed DbCommand (87ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:36:24.667 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:36:24.673 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation) in 498.48ms
+2026-03-31 01:36:24.674 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:24.675 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa/5 - 200 null application/json; charset=utf-8 661.3558ms
+2026-03-31 01:36:24.709 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:36:24.720 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:36:24.736 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 353.353ms
+2026-03-31 01:36:24.737 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:24.738 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 374.0554ms
+2026-03-31 01:36:27.612 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa - null null
+2026-03-31 01:36:27.623 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:36:27.624 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:27.627 -03:00 [INF] Route matched with {action = "GetTarefas", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefasAsync() on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:36:27.677 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+2026-03-31 01:36:27.682 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:36:27.683 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation) in 55.2505ms
+2026-03-31 01:36:27.684 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:27.686 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa - 200 null application/json; charset=utf-8 74.0763ms
+2026-03-31 01:36:29.939 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:36:29.942 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:36:29.947 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:29.951 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:36:29.949 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Status - null null
+2026-03-31 01:36:29.958 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:36:29.959 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - null null
+2026-03-31 01:36:29.961 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:29.968 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:36:29.973 -03:00 [INF] Route matched with {action = "GetStatus", controller = "Status"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusAsync() on controller Tarefeiro.Presentation.Controllers.Status.StatusController (Tarefeiro.Presentation).
+2026-03-31 01:36:29.975 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:29.979 -03:00 [INF] Route matched with {action = "GetTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:36:30.019 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:36:30.027 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:36:30.028 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 73.1873ms
+2026-03-31 01:36:30.032 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:30.033 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 94.0334ms
+2026-03-31 01:36:30.051 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:36:30.069 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:36:30.073 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation) in 92.757ms
+2026-03-31 01:36:30.077 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:30.080 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - 200 null application/json; charset=utf-8 121.0174ms
+2026-03-31 01:36:30.126 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`Nome`
+FROM `Status` AS `s`
+2026-03-31 01:36:30.130 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Status.StatusDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:36:30.131 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation) in 154.5005ms
+2026-03-31 01:36:30.133 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:36:30.135 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Status - 200 null application/json; charset=utf-8 185.8396ms
+2026-03-31 01:37:13.864 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa - null null
+2026-03-31 01:37:13.870 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:13.874 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:13.879 -03:00 [INF] Route matched with {action = "GetTarefas", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefasAsync() on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:37:13.944 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+2026-03-31 01:37:13.951 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:37:13.957 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation) in 72.7559ms
+2026-03-31 01:37:13.961 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:13.964 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa - 200 null application/json; charset=utf-8 99.3717ms
+2026-03-31 01:37:18.683 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:37:18.686 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:18.687 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:18.686 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Status - null null
+2026-03-31 01:37:18.689 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:37:18.689 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:18.693 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:18.693 -03:00 [INF] Route matched with {action = "GetStatus", controller = "Status"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusAsync() on controller Tarefeiro.Presentation.Controllers.Status.StatusController (Tarefeiro.Presentation).
+2026-03-31 01:37:18.700 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa/6 - null null
+2026-03-31 01:37:18.708 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:18.709 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:18.711 -03:00 [INF] Route matched with {action = "GetTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:37:18.736 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:37:18.740 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:37:18.750 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 59.7717ms
+2026-03-31 01:37:18.751 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:18.752 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 69.0587ms
+2026-03-31 01:37:18.762 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:37:18.769 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:37:18.769 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`Nome`
+FROM `Status` AS `s`
+2026-03-31 01:37:18.772 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation) in 58.3827ms
+2026-03-31 01:37:18.773 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Status.StatusDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:37:18.775 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:18.776 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa/6 - 200 null application/json; charset=utf-8 75.8658ms
+2026-03-31 01:37:18.777 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation) in 79.6263ms
+2026-03-31 01:37:18.781 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:18.782 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Status - 200 null application/json; charset=utf-8 96.4443ms
+2026-03-31 01:37:29.992 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa - null null
+2026-03-31 01:37:30.001 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:30.002 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:30.005 -03:00 [INF] Route matched with {action = "GetTarefas", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefasAsync() on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:37:30.047 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+2026-03-31 01:37:30.049 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:37:30.051 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation) in 43.0424ms
+2026-03-31 01:37:30.052 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:30.053 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa - 200 null application/json; charset=utf-8 61.0412ms
+2026-03-31 01:37:31.111 -03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5091/api/Tarefa/6 - null null
+2026-03-31 01:37:31.113 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:31.122 -03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5091/api/Tarefa/6 - 204 null null 10.3674ms
+2026-03-31 01:37:31.125 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5091/api/Tarefa/6 - null null
+2026-03-31 01:37:31.126 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:31.127 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.DeleteTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:31.147 -03:00 [INF] Route matched with {action = "DeleteTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:37:31.296 -03:00 [INF] Executed DbCommand (68ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE `t`
+FROM `Tarefas` AS `t`
+WHERE `t`.`Id` = @__id_0
+2026-03-31 01:37:31.319 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:37:31.328 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.DeleteTarefaByIdAsync (Tarefeiro.Presentation) in 178.5119ms
+2026-03-31 01:37:31.329 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.DeleteTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:31.330 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5091/api/Tarefa/6 - 200 null application/json; charset=utf-8 205.1685ms
+2026-03-31 01:37:31.348 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa - null null
+2026-03-31 01:37:31.350 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:31.350 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:31.353 -03:00 [INF] Route matched with {action = "GetTarefas", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefasAsync() on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:37:31.377 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+2026-03-31 01:37:31.379 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:37:31.380 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation) in 24.1124ms
+2026-03-31 01:37:31.381 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:31.382 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa - 200 null application/json; charset=utf-8 33.7849ms
+2026-03-31 01:37:33.674 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:37:33.676 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:33.676 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:33.677 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:37:33.708 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:37:33.711 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:37:33.712 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 34.0638ms
+2026-03-31 01:37:33.712 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:33.717 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 42.6318ms
+2026-03-31 01:37:35.024 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria/12 - null null
+2026-03-31 01:37:35.025 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:35.025 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:35.036 -03:00 [INF] Route matched with {action = "GetCategoriaById", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:37:35.109 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:37:35.114 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:37:35.120 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriaByIdAsync (Tarefeiro.Presentation) in 50.1252ms
+2026-03-31 01:37:35.121 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:35.123 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria/12 - 200 null application/json; charset=utf-8 98.9948ms
+2026-03-31 01:37:37.800 -03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5091/api/Categoria - null null
+2026-03-31 01:37:37.802 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:37.804 -03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5091/api/Categoria - 204 null null 3.867ms
+2026-03-31 01:37:37.808 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5091/api/Categoria - application/json 28
+2026-03-31 01:37:37.811 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:37.811 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.UpdateCategoriaAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:37.822 -03:00 [INF] Route matched with {action = "UpdateCategoria", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateCategoriaAsync(Tarefeiro.Application.DTOs.Categoria.UpdateCategoriaDto) on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:37:38.021 -03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__categoria_Nome_1='?' (Size = 20), @__categoria_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Categorias` AS `c`
+SET `c`.`Nome` = @__categoria_Nome_1
+WHERE `c`.`Id` = @__categoria_Id_0
+2026-03-31 01:37:38.023 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:37:38.024 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.UpdateCategoriaAsync (Tarefeiro.Presentation) in 201.3466ms
+2026-03-31 01:37:38.026 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.UpdateCategoriaAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:38.026 -03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 218.7138ms
+2026-03-31 01:37:39.561 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:37:39.569 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:39.570 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:39.574 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:37:39.597 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:37:39.602 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:37:39.603 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 28.1164ms
+2026-03-31 01:37:39.604 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:39.608 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 46.6641ms
+2026-03-31 01:37:41.458 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa - null null
+2026-03-31 01:37:41.461 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:41.462 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:41.464 -03:00 [INF] Route matched with {action = "GetTarefas", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefasAsync() on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:37:41.483 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+2026-03-31 01:37:41.485 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:37:41.486 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation) in 20.089ms
+2026-03-31 01:37:41.488 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:41.489 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa - 200 null application/json; charset=utf-8 30.8215ms
+2026-03-31 01:37:42.831 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:37:42.837 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:42.838 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:42.843 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:37:42.862 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Status - null null
+2026-03-31 01:37:42.864 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:42.866 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:42.866 -03:00 [INF] Route matched with {action = "GetStatus", controller = "Status"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusAsync() on controller Tarefeiro.Presentation.Controllers.Status.StatusController (Tarefeiro.Presentation).
+2026-03-31 01:37:42.902 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:37:42.905 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:37:42.910 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 65.1707ms
+2026-03-31 01:37:42.913 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:42.914 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 83.4883ms
+2026-03-31 01:37:42.923 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - null null
+2026-03-31 01:37:42.928 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:37:42.942 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:42.943 -03:00 [INF] Route matched with {action = "GetTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:37:42.969 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`Nome`
+FROM `Status` AS `s`
+2026-03-31 01:37:42.973 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Status.StatusDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:37:42.979 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation) in 112.4997ms
+2026-03-31 01:37:42.989 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:42.980 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:37:42.990 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Status - 200 null application/json; charset=utf-8 127.5863ms
+2026-03-31 01:37:42.994 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:37:43.006 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation) in 56.858ms
+2026-03-31 01:37:43.013 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:37:43.014 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - 200 null application/json; charset=utf-8 90.6428ms
+2026-03-31 01:40:27.028 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Status - null null
+2026-03-31 01:40:27.027 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:40:27.026 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - null null
+2026-03-31 01:40:27.463 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:40:27.463 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:40:27.464 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:40:27.485 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:40:27.486 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:40:27.490 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:40:27.819 -03:00 [INF] Route matched with {action = "GetTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:40:27.821 -03:00 [INF] Route matched with {action = "GetStatus", controller = "Status"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusAsync() on controller Tarefeiro.Presentation.Controllers.Status.StatusController (Tarefeiro.Presentation).
+2026-03-31 01:40:27.822 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:40:29.148 -03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`Nome`
+FROM `Status` AS `s`
+2026-03-31 01:40:29.150 -03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:40:29.223 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Status.StatusDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:40:29.236 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:40:29.410 -03:00 [INF] Executed DbCommand (161ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:40:29.424 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation) in 1602.0883ms
+2026-03-31 01:40:29.425 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:40:29.430 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Status - 200 null application/json; charset=utf-8 2442.8922ms
+2026-03-31 01:40:29.427 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:40:29.424 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 1601.0543ms
+2026-03-31 01:40:29.446 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:40:29.448 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation) in 1628.1069ms
+2026-03-31 01:40:29.455 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:40:29.450 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 2464.4043ms
+2026-03-31 01:40:29.458 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - 200 null application/json; charset=utf-8 2473.0144ms
+2026-03-31 01:40:31.553 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - null null
+2026-03-31 01:40:31.555 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:40:31.560 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:40:31.563 -03:00 [INF] Route matched with {action = "GetTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:40:31.702 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:40:31.704 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:40:31.707 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:40:31.710 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:40:31.711 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:40:31.716 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:40:31.719 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation) in 148.9744ms
+2026-03-31 01:40:31.722 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:40:31.723 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - 200 null application/json; charset=utf-8 170.2877ms
+2026-03-31 01:40:31.729 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Status - null null
+2026-03-31 01:40:31.924 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:40:32.362 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:40:32.369 -03:00 [INF] Route matched with {action = "GetStatus", controller = "Status"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusAsync() on controller Tarefeiro.Presentation.Controllers.Status.StatusController (Tarefeiro.Presentation).
+2026-03-31 01:40:32.377 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:40:32.382 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:40:32.389 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 676.0845ms
+2026-03-31 01:40:32.393 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:40:32.396 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 694.2861ms
+2026-03-31 01:40:32.430 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`Nome`
+FROM `Status` AS `s`
+2026-03-31 01:40:32.434 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Status.StatusDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:40:32.440 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation) in 70.2939ms
+2026-03-31 01:40:32.450 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:40:32.451 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Status - 200 null application/json; charset=utf-8 721.1306ms
+2026-03-31 01:41:12.184 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - null null
+2026-03-31 01:41:12.188 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:41:12.459 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:12.460 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:12.464 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:12.476 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:41:12.463 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:12.626 -03:00 [INF] Route matched with {action = "GetTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:41:12.737 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Status - null null
+2026-03-31 01:41:12.743 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:41:12.747 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:12.750 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:12.748 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:41:12.751 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 264.1035ms
+2026-03-31 01:41:12.754 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:12.753 -03:00 [INF] Route matched with {action = "GetStatus", controller = "Status"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusAsync() on controller Tarefeiro.Presentation.Controllers.Status.StatusController (Tarefeiro.Presentation).
+2026-03-31 01:41:12.754 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 566.2586ms
+2026-03-31 01:41:12.766 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:41:12.774 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:41:12.796 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation) in 153.1548ms
+2026-03-31 01:41:12.815 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`Nome`
+FROM `Status` AS `s`
+2026-03-31 01:41:12.815 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:12.816 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Status.StatusDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:41:12.816 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - 200 null application/json; charset=utf-8 631.971ms
+2026-03-31 01:41:12.817 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation) in 62.3212ms
+2026-03-31 01:41:12.832 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:12.839 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Status - 200 null application/json; charset=utf-8 102.7724ms
+2026-03-31 01:41:28.200 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - null null
+2026-03-31 01:41:28.208 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:28.211 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:28.208 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:41:28.218 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:28.224 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:28.225 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:41:28.217 -03:00 [INF] Route matched with {action = "GetTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:41:28.738 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Status - null null
+2026-03-31 01:41:28.743 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:28.745 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:28.746 -03:00 [INF] Route matched with {action = "GetStatus", controller = "Status"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusAsync() on controller Tarefeiro.Presentation.Controllers.Status.StatusController (Tarefeiro.Presentation).
+2026-03-31 01:41:29.794 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:41:29.797 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:41:29.799 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 1566.9789ms
+2026-03-31 01:41:29.803 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:29.806 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 1598.0851ms
+2026-03-31 01:41:29.805 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:41:29.809 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`Nome`
+FROM `Status` AS `s`
+2026-03-31 01:41:29.815 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Status.StatusDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:41:29.820 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation) in 1066.5178ms
+2026-03-31 01:41:29.812 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:41:29.823 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:29.828 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Status - 200 null application/json; charset=utf-8 1090.7018ms
+2026-03-31 01:41:29.824 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation) in 1589.9908ms
+2026-03-31 01:41:29.834 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:29.836 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - 200 null application/json; charset=utf-8 1635.8876ms
+2026-03-31 01:41:36.376 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - null null
+2026-03-31 01:41:36.382 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:36.383 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:36.383 -03:00 [INF] Route matched with {action = "GetTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:41:36.406 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:41:36.419 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:36.411 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Status - null null
+2026-03-31 01:41:36.431 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:36.438 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:36.425 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:36.442 -03:00 [INF] Route matched with {action = "GetStatus", controller = "Status"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusAsync() on controller Tarefeiro.Presentation.Controllers.Status.StatusController (Tarefeiro.Presentation).
+2026-03-31 01:41:36.444 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:41:36.449 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:41:36.468 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:41:36.489 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation) in 103.4671ms
+2026-03-31 01:41:36.503 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:36.504 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - 200 null application/json; charset=utf-8 127.8122ms
+2026-03-31 01:41:36.547 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`Nome`
+FROM `Status` AS `s`
+2026-03-31 01:41:36.549 -03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:41:36.561 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Status.StatusDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:41:36.568 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:41:36.577 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 113.1021ms
+2026-03-31 01:41:36.586 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:36.587 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 180.9369ms
+2026-03-31 01:41:36.571 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation) in 118.9751ms
+2026-03-31 01:41:36.597 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:36.598 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Status - 200 null application/json; charset=utf-8 186.9338ms
+2026-03-31 01:41:48.457 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - null null
+2026-03-31 01:41:48.481 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:48.481 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:48.487 -03:00 [INF] Route matched with {action = "GetTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:41:48.489 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:41:48.491 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:48.492 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:48.492 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:41:48.501 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Status - null null
+2026-03-31 01:41:48.504 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:48.505 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:48.505 -03:00 [INF] Route matched with {action = "GetStatus", controller = "Status"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusAsync() on controller Tarefeiro.Presentation.Controllers.Status.StatusController (Tarefeiro.Presentation).
+2026-03-31 01:41:49.224 -03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:41:49.226 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`Nome`
+FROM `Status` AS `s`
+2026-03-31 01:41:49.235 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:41:49.241 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Status.StatusDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:41:49.248 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation) in 729.1348ms
+2026-03-31 01:41:49.243 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation) in 754.1737ms
+2026-03-31 01:41:49.255 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:49.262 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Status - 200 null application/json; charset=utf-8 761.7643ms
+2026-03-31 01:41:49.257 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:49.277 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - 200 null application/json; charset=utf-8 819.8622ms
+2026-03-31 01:41:49.372 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:41:49.377 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:41:49.381 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 879.6637ms
+2026-03-31 01:41:49.382 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:49.382 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 893.2988ms
+2026-03-31 01:41:51.154 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - null null
+2026-03-31 01:41:51.156 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:51.157 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:51.157 -03:00 [INF] Route matched with {action = "GetTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:41:51.183 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:41:51.189 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:51.187 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Status - null null
+2026-03-31 01:41:51.195 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:51.197 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:51.199 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:51.201 -03:00 [INF] Route matched with {action = "GetStatus", controller = "Status"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusAsync() on controller Tarefeiro.Presentation.Controllers.Status.StatusController (Tarefeiro.Presentation).
+2026-03-31 01:41:51.198 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:41:51.242 -03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:41:51.243 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:41:51.252 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation) in 71.1511ms
+2026-03-31 01:41:51.252 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:51.259 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - 200 null application/json; charset=utf-8 104.9699ms
+2026-03-31 01:41:51.280 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:41:51.287 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`Nome`
+FROM `Status` AS `s`
+2026-03-31 01:41:51.288 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Status.StatusDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:41:51.296 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation) in 90.7046ms
+2026-03-31 01:41:51.284 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:41:51.297 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:51.303 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Status - 200 null application/json; charset=utf-8 115.5262ms
+2026-03-31 01:41:51.300 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 92.2088ms
+2026-03-31 01:41:51.306 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:51.307 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 123.685ms
+2026-03-31 01:41:54.695 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - null null
+2026-03-31 01:41:54.698 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:54.704 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:54.705 -03:00 [INF] Route matched with {action = "GetTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:41:54.735 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:41:54.736 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:54.740 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Status - null null
+2026-03-31 01:41:54.741 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:41:54.746 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:54.747 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:41:54.744 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:54.751 -03:00 [INF] Route matched with {action = "GetStatus", controller = "Status"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusAsync() on controller Tarefeiro.Presentation.Controllers.Status.StatusController (Tarefeiro.Presentation).
+2026-03-31 01:41:54.807 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:41:54.817 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:41:54.836 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation) in 129.513ms
+2026-03-31 01:41:54.839 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:54.847 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - 200 null application/json; charset=utf-8 152.3179ms
+2026-03-31 01:41:54.867 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:41:54.872 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:41:54.855 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`Nome`
+FROM `Status` AS `s`
+2026-03-31 01:41:54.880 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 131.9384ms
+2026-03-31 01:41:54.887 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:54.889 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 154.0286ms
+2026-03-31 01:41:54.882 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Status.StatusDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:41:54.904 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation) in 150.0356ms
+2026-03-31 01:41:54.905 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:41:54.905 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Status - 200 null application/json; charset=utf-8 165.1029ms
+2026-03-31 01:42:04.167 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - null null
+2026-03-31 01:42:04.169 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:42:04.169 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:04.176 -03:00 [INF] Route matched with {action = "GetTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:42:04.185 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:42:04.190 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:42:04.193 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:04.196 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:42:04.211 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Status - null null
+2026-03-31 01:42:04.214 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:42:04.217 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:04.220 -03:00 [INF] Route matched with {action = "GetStatus", controller = "Status"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusAsync() on controller Tarefeiro.Presentation.Controllers.Status.StatusController (Tarefeiro.Presentation).
+2026-03-31 01:42:04.338 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`Nome`
+FROM `Status` AS `s`
+2026-03-31 01:42:04.344 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Status.StatusDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:42:04.355 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation) in 127.6272ms
+2026-03-31 01:42:04.360 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:04.367 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:42:04.372 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:42:04.370 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Status - 200 null application/json; charset=utf-8 158.2132ms
+2026-03-31 01:42:04.375 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 174.4823ms
+2026-03-31 01:42:04.377 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:04.380 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 194.6015ms
+2026-03-31 01:42:04.391 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:42:04.400 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:42:04.409 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation) in 233.4669ms
+2026-03-31 01:42:04.417 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:04.418 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - 200 null application/json; charset=utf-8 250.7529ms
+2026-03-31 01:42:09.155 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - null null
+2026-03-31 01:42:09.156 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:42:09.157 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:09.157 -03:00 [INF] Route matched with {action = "GetTarefaById", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:42:09.171 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:42:09.176 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:42:09.179 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:09.178 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Status - null null
+2026-03-31 01:42:09.180 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:42:09.181 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:42:09.188 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:09.189 -03:00 [INF] Route matched with {action = "GetStatus", controller = "Status"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStatusAsync() on controller Tarefeiro.Presentation.Controllers.Status.StatusController (Tarefeiro.Presentation).
+2026-03-31 01:42:09.198 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+WHERE `t`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:42:09.216 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:42:09.220 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:42:09.225 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 38.4246ms
+2026-03-31 01:42:09.226 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:09.227 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 56.1071ms
+2026-03-31 01:42:09.217 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:42:09.233 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation) in 71.7679ms
+2026-03-31 01:42:09.240 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:09.242 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa/4 - 200 null application/json; charset=utf-8 86.9717ms
+2026-03-31 01:42:09.243 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`Nome`
+FROM `Status` AS `s`
+2026-03-31 01:42:09.258 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Status.StatusDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:42:09.260 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation) in 63.1593ms
+2026-03-31 01:42:09.272 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Status.StatusController.GetStatusAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:09.277 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Status - 200 null application/json; charset=utf-8 99.0042ms
+2026-03-31 01:42:12.727 -03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5091/api/Tarefa - null null
+2026-03-31 01:42:12.729 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:42:12.766 -03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5091/api/Tarefa - 204 null null 39.3808ms
+2026-03-31 01:42:12.769 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5091/api/Tarefa - application/json 70
+2026-03-31 01:42:12.774 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:42:12.775 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.UpdateTarefaAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:12.908 -03:00 [INF] Route matched with {action = "UpdateTarefa", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateTarefaAsync(Tarefeiro.Application.DTOs.Tarefa.UpdateTarefaDto) on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:42:13.335 -03:00 [INF] Executed DbCommand (200ms) [Parameters=[@__tarefa_Comentario_3='?' (Size = 20), @__tarefa_CategoriaId_2='?' (DbType = Int32), @__tarefa_StatusId_1='?' (DbType = Int32), @__tarefa_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Tarefas` AS `t`
+SET `t`.`Comentario` = @__tarefa_Comentario_3,
+    `t`.`CategoriaId` = @__tarefa_CategoriaId_2,
+    `t`.`StatusId` = @__tarefa_StatusId_1
+WHERE `t`.`Id` = @__tarefa_Id_0
+2026-03-31 01:42:13.338 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:42:13.339 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.UpdateTarefaAsync (Tarefeiro.Presentation) in 430.5856ms
+2026-03-31 01:42:13.342 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.UpdateTarefaAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:13.343 -03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5091/api/Tarefa - 200 null application/json; charset=utf-8 574.2554ms
+2026-03-31 01:42:16.471 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa - null null
+2026-03-31 01:42:16.475 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:42:16.476 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:16.478 -03:00 [INF] Route matched with {action = "GetTarefas", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefasAsync() on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:42:16.927 -03:00 [INF] Executed DbCommand (431ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+2026-03-31 01:42:16.930 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:42:16.931 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation) in 449.719ms
+2026-03-31 01:42:16.933 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:16.934 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa - 200 null application/json; charset=utf-8 462.1118ms
+2026-03-31 01:42:31.299 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Tarefa - null null
+2026-03-31 01:42:31.300 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:42:31.302 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:31.305 -03:00 [INF] Route matched with {action = "GetTarefas", controller = "Tarefa"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTarefasAsync() on controller Tarefeiro.Presentation.Controllers.Tarefa.TarefaController (Tarefeiro.Presentation).
+2026-03-31 01:42:31.708 -03:00 [INF] Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `t`.`Id`, `t`.`CategoriaId`, `t`.`Comentario`, `t`.`StatusId`, `s`.`Id`, `s`.`Nome`, `c`.`Id`, `c`.`Nome`
+FROM `Tarefas` AS `t`
+INNER JOIN `Status` AS `s` ON `t`.`StatusId` = `s`.`Id`
+INNER JOIN `Categorias` AS `c` ON `t`.`CategoriaId` = `c`.`Id`
+2026-03-31 01:42:31.709 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Tarefa.TarefaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:42:31.711 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation) in 402.4335ms
+2026-03-31 01:42:31.713 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Tarefa.TarefaController.GetTarefasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:42:31.714 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Tarefa - 200 null application/json; charset=utf-8 464.4809ms
+2026-03-31 01:45:04.027 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:45:04.174 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:45:04.177 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:45:04.179 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:45:05.526 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:45:05.527 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:45:05.528 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 1348.006ms
+2026-03-31 01:45:05.529 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:45:05.531 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 1503.228ms
+2026-03-31 01:45:09.211 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria/15 - null null
+2026-03-31 01:45:09.449 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:45:09.450 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:45:09.451 -03:00 [INF] Route matched with {action = "GetCategoriaById", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriaByIdAsync(Int32) on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:45:09.598 -03:00 [INF] Executed DbCommand (130ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2026-03-31 01:45:09.602 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-31 01:45:09.606 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriaByIdAsync (Tarefeiro.Presentation) in 154.0176ms
+2026-03-31 01:45:09.608 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriaByIdAsync (Tarefeiro.Presentation)'
+2026-03-31 01:45:09.609 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria/15 - 200 null application/json; charset=utf-8 398.1226ms
+2026-03-31 01:45:11.747 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5091/api/Categoria - null null
+2026-03-31 01:45:11.748 -03:00 [INF] CORS policy execution successful.
+2026-03-31 01:45:11.748 -03:00 [INF] Executing endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:45:11.749 -03:00 [INF] Route matched with {action = "GetCategorias", controller = "Categoria"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoriasAsync() on controller Tarefeiro.Presentation.Controllers.Categoria.CategoriaController (Tarefeiro.Presentation).
+2026-03-31 01:45:11.776 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Nome`
+FROM `Categorias` AS `c`
+2026-03-31 01:45:11.784 -03:00 [INF] Executing OkObjectResult, writing value of type 'Tarefeiro.Application.AppResponse.ServiceResponse`1[[System.Collections.Generic.IEnumerable`1[[Tarefeiro.Application.DTOs.Categoria.CategoriaDto, Tarefeiro.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-31 01:45:11.788 -03:00 [INF] Executed action Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation) in 37.2372ms
+2026-03-31 01:45:11.795 -03:00 [INF] Executed endpoint 'Tarefeiro.Presentation.Controllers.Categoria.CategoriaController.GetCategoriasAsync (Tarefeiro.Presentation)'
+2026-03-31 01:45:11.796 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5091/api/Categoria - 200 null application/json; charset=utf-8 49.3772ms
+2026-03-31 01:47:33.509 -03:00 [INF] Application is shutting down...
+2026-03-31 01:51:02.604 -03:00 [INF] Executed DbCommand (150ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='TarefaDB' AND TABLE_NAME='__EFMigrationsHistory';
+2026-03-31 01:51:02.844 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='TarefaDB' AND TABLE_NAME='__EFMigrationsHistory';
+2026-03-31 01:51:03.055 -03:00 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2026-03-31 01:51:03.137 -03:00 [INF] Applying migration '20260331045013_LengthFix'.
+2026-03-31 01:51:03.798 -03:00 [INF] Executed DbCommand (398ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE `Tarefas` MODIFY COLUMN `Comentario` varchar(50) CHARACTER SET utf8mb4 NOT NULL;
+2026-03-31 01:51:04.006 -03:00 [INF] Executed DbCommand (205ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE `Status` MODIFY COLUMN `Nome` varchar(50) CHARACTER SET utf8mb4 NOT NULL;
+2026-03-31 01:51:04.189 -03:00 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE `Categorias` MODIFY COLUMN `Nome` varchar(50) CHARACTER SET utf8mb4 NOT NULL;
+2026-03-31 01:51:04.209 -03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `__EFMigrationsHistory` (`MigrationId`, `ProductVersion`)
+VALUES ('20260331045013_LengthFix', '8.0.23');
