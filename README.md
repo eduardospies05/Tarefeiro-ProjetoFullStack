@@ -15,6 +15,8 @@ A API foi desenvolvida seguindo os princípios da **Clean Architecture**, garant
 * **MySQL:** Banco de dados relacional para armazenamento seguro das informações.
 * **AutoMapper:** Implementado para realizar o mapping entre Entidades de domínio e DTOs (Data Transfer Objects), evitando a exposição direta do modelo de dados e reduzindo o boilerplate code.
 * **Boas Práticas:** Aplicação de Injeção de Dependência nativa, tratamento de exceções estruturado e padrões de repositório para isolar o acesso a dados.
+* **Serilog:** Utilização de Serilog como tecnologia de Logging.
+* **FluentValidation:** Implementado para garantir a integridade dos dados de entrada. As regras de validação são definidas de forma fluida e desacoplada, permitindo mensagens de erro e lógica complexa de negócio antes que os dados cheguem aos Casos de Uso.
 
 ### Frontend (Angular)
 Interface SPA (Single Page Application) focada em uma experiência de usuário fluida:
@@ -29,9 +31,9 @@ Interface SPA (Single Page Application) focada em uma experiência de usuário f
 O backend está organizado nas seguintes camadas:
 
 1.  **Domain:** Contém as entidades e interface dos repositórios.
-2.  **Application:** Onde residem os DTOs, Mappers e Casos de Uso.
-3.  **Infrastructure:** Implementação técnica da persistência de dados (Contexto do Banco e Repositórios).
-4.  **Presentation:** Camada de entrada com Controllers, configuração de middlewares e documentação de endpoints.
+2.  **Application:** Onde residem os DTOs, Mappers, Validators e Casos de Uso.
+3.  **Infrastructure:** Implementação técnica da persistência de dados (Contexto do Banco e Repositórios) e configuração de Middleware(**GlobalException**)
+4.  **Presentation:** Camada de entrada com Controllers.
 
 ---
 
