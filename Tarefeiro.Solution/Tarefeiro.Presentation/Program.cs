@@ -1,5 +1,7 @@
 
+using Serilog;
 using Tarefeiro.Application.Service;
+using Tarefeiro.Infrastructure.Middleware;
 using Tarefeiro.Infrastructure.Service;
 
 namespace Tarefeiro.Presentation;
@@ -14,6 +16,7 @@ public class Program
 
         builder.Services.InfrastructureService(builder.Configuration, originName)
                         .ApplicationService();
+        builder.StartSerilog();
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
@@ -30,6 +33,7 @@ public class Program
 
         app.UseHttpsRedirection();
 
+        app.UseMiddleware<GlobalException>();
         app.UseCors(originName);
         
         app.UseAuthorization();

@@ -16,6 +16,7 @@
     <Folder Include="Configuration/Status/" />
     <Folder Include="Configuration/Tarefa/" />
     <Folder Include="Data/" />
+    <Folder Include="Middleware/" />
     <Folder Include="RepositoryImplementation/" />
     <Folder Include="RepositoryImplementation/Categoria/" />
     <Folder Include="RepositoryImplementation/Status/" />
