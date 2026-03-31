@@ -1,0 +1,56 @@
+<div class="container mt-3">
+    <div class="d-flex align-items-center justify-content-between p-2">
+        <h1>Tarefas</h1>
+        <a class="btn btn-primary" routerLink="/tarefas/add">
+            Adicionar Tarefa
+        </a>
+    </div>
+    <table class="table table-bordered table-hover mt-1">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Status</th>
+                <th>Categoria</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if(tarefas$ | async; as tarefas) {
+                @for(tarefa of tarefas.data; track tarefa.id) {
+                    <tr>
+                        <th>{{tarefa.id}}</th>
+                        <td>{{tarefa.comentario}}</td>
+                        <td>{{tarefa.status.status}}</td>
+                        <td>{{tarefa.categoria.categoria}}</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <a class="btn btn-warning btn-sm"
+                                   routerLink="/tarefas/edit/{{tarefa.id}}">
+                                    Atualizar
+                                </a>
+                                <button (click)="onDelete(tarefa.id)" class="btn btn-danger btn-sm">
+                                    Excluir
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+                @empty {
+                    <tr>
+                        <td colspan="5" class="text-center text-muted">
+                            Nenhuma tarefa encontrada
+                        </td>
+                    </tr>
+                }
+            }
+            @else {
+                <tr>
+                    <td colspan="5" class="text-center text-muted">
+                        Carregando...
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

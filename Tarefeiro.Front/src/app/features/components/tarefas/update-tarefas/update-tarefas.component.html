@@ -1,0 +1,49 @@
+<div class="container mt-3">
+    <h1>Atualizar Tarefa</h1>
+    <div class="mt-3">
+        <form>
+            <div class="mt-3">
+                <label for="" class="form-label">Id</label>
+                <div class="form-control bg-light">{{update.id}}</div>
+            </div>
+            <div class="mt-3">
+                <label for="" class="form-label">Nome</label>
+                <input type="text" class="form-control" name="comentario" [(ngModel)]="update.comentario">
+            </div>
+            <div class="mt-3">
+                <label for="" class="form-label">Categoria</label>
+                <select name="categoriaId" class="form-select" [(ngModel)]="update.categoriaId">
+                    <option [value]="undefined" disabled>
+                        Selecione uma categoria
+                    </option>
+                    @if(categorias$ | async; as cat) {
+                        @for(categoria of cat.data; track categoria.id) {
+                            <option [value]="categoria.id">
+                                {{categoria.nome}}
+                            </option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="mt-3">
+                <label for="" class="form-label">Status</label>
+                <select name="statusId" class="form-select" [(ngModel)]="update.statusId">
+                    <option [value]="undefined" disabled>
+                        Selecione um status
+                    </option>
+                    @if(status$ | async; as st) {
+                        @for(status of st.data; track status.id) {
+                            <option [value]="status.id">
+                                {{status.nome}}
+                            </option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="d-flex align-items-center mt-4 gap-2">
+                <button class="btn btn-warning">Atualizar</button>
+                <a routerLink="/tarefas" class="btn btn-primary">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="container mt-3">
+    <div class="d-flex justify-content-between p-2 align-items-center">
+        <h1>Status</h1>
+        <a class="btn btn-primary" routerLink="/status/add">Adicionar Status</a>
+    </div>
+    <div class="container mt-3">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if(status$ | async; as st) {
+                    @for(s of st.data; track s.id) {
+                        <tr>
+                            <th>{{s.id}}</th>
+                            <td>{{s.nome}}</td>
+                            <td class="d-flex align-items-center gap-2">
+                                <a class="btn btn-warning btn-sm"
+                                   routerLink="/status/edit/{{s.id}}">
+                                    Atualizar
+                                </a>
+                                <button class="btn btn-sm btn-danger"
+                                        (click)="deleteStatusById(s.id)">
+                                    Excluir
+                                </button>
+                            </td>
+                        </tr>
+                    } @empty {
+                        <td colspan="3" class="text-center text-muted">
+                            Nenhum status encontrado
+                        </td>
+                    }
+                }@else {
+                    <tr>
+                        <td colspan="3" class="text-center text-muted">
+                            Erro ao carregar dados
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

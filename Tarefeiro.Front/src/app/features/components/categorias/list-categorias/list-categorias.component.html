@@ -1,0 +1,42 @@
+<div class="container mt-3">
+    <div class="d-flex mt-3 justify-content-between p-2 align-items-center">
+        <h1>Categorias</h1>
+        <a class="btn btn-primary" routerLink="/categorias/add">Adicionar Categoria</a>
+    </div>
+
+    <table class="table table-bordered mt-3">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if(categorias$ | async; as res) {
+                @for(categoria of res.data; track categoria.id) {
+                    <tr>
+                        <th>{{categoria.id}}</th>
+                        <td>{{categoria.nome}}</td>
+                        <td class="d-flex gap-2 align-items-center">
+                            <a routerLink="/categorias/edit/{{categoria.id}}" class="btn btn-sm btn-warning">
+                                Atualizar
+                            </a>
+                            <button (click)="deleteCategoriaById(categoria.id)" class="btn btn-sm btn-danger">
+                                Excluir
+                            </button>
+                        </td>
+                    </tr>
+                } @empty {
+                    <tr>
+                        <td colspan="3" class="text-center text-muted">Nenhuma categoria encontrada</td>
+                    </tr>
+                }
+            } @else {
+                <tr>
+                    <td colspan="3" class="text-center text-muted">Erro ao requisitar dados</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
