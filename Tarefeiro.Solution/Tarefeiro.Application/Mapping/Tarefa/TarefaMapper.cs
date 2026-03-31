@@ -9,8 +9,9 @@ public class TarefaMapper : Profile
 {
     public TarefaMapper()
     {
-        CreateMap<TarefaEntity, TarefaDto>().ForMember(m => m.Status, opt => opt.MapFrom(src => src.Status.Nome))
-                                            .ForMember(m => m.Categoria, opt => opt.MapFrom(src => src.Categoria.Nome));
+        CreateMap<TarefaEntity, TarefaDto>()
+            .ForMember(src => src.Status, opt => opt.MapFrom(m => new ShortStatusDto(m.Status.Id, m.Status.Nome)))
+            .ForMember(src => src.Categoria, opt => opt.MapFrom(m => new ShortCategoriaDto(m.Categoria.Id, m.Categoria.Nome)));
 
         CreateMap<CreateTarefaDto, TarefaEntity>();
         CreateMap<UpdateTarefaDto, TarefaEntity>();

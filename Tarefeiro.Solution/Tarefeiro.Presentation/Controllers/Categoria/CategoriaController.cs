@@ -49,5 +49,16 @@ namespace Tarefeiro.Presentation.Controllers.Categoria
 
             return Ok(response);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCategoriaByIdAsync(int id)
+        {
+            var response = await useCase.DeleteCategoriaByIdAsync(id);
+
+            if(!response.Status)
+                return BadRequest(response);
+
+            return Ok(response);
+        }
     }
 }
